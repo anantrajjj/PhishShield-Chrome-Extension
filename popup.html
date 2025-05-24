@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhishShield</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="icons/icon48.png" alt="PhishShield Logo">
+        <h1>PhishShield</h1>
+      </div>
+    </header>
+    
+    <main>
+      <div id="status-safe" class="status-container">
+        <div class="status-icon safe">✓</div>
+        <h2>Website Appears Safe</h2>
+        <p>No phishing indicators detected on this site.</p>
+      </div>
+      
+      <div id="status-warning" class="status-container hidden">
+        <div class="status-icon warning">⚠️</div>
+        <h2>Warning: Potential Phishing Site</h2>
+        <p>This website has been flagged as potentially dangerous.</p>
+        <div class="url-container">
+          <p id="flagged-url">example.com</p>
+        </div>
+        
+        <div class="reasons-container">
+          <h3>Reasons:</h3>
+          <ul id="reasons-list">
+            <!-- Reasons will be populated by JavaScript -->
+          </ul>
+        </div>
+        
+        <div class="actions">
+          <button id="back-button" class="btn danger">Go Back (Recommended)</button>
+          <button id="proceed-button" class="btn warning">Proceed Anyway (Unsafe)</button>
+        </div>
+      </div>
+      
+      <div class="info-section">
+        <h3>About PhishShield</h3>
+        <p>PhishShield protects you from phishing websites by analyzing URLs in real-time using:</p>
+        <ul>
+          <li>Domain reputation checks</li>
+          <li>Heuristic analysis</li>
+          <li>Phishing database lookups</li>
+        </ul>
+      </div>
+    </main>
+    
+    <footer>
+      <p>PhishShield v1.0</p>
+    </footer>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
